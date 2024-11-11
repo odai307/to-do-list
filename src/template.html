@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar for projects -->
+    <aside class="sidebar">
+        <h2>Projects</h2>
+        <ul id="project-list" data-project-list-container>
+            <!-- New projects can be added here dynamically -->
+             
+        </ul>
+        <input type="text" id="new-project-input" placeholder="Enter new project name" data-project-input>
+        <button id="new-project-btn" data-add-btn>Add Project</button>
+    </aside>
+
+    <!-- Main content for todos -->
+    <main class="content">
+        <header class="header">
+            <h1>Todo List</h1>
+            <button id="new-todo-btn">Add Todo</button>
+        </header>
+        <section id="todo-list">
+            <!-- Todo items will be generated here -->
+             <div class="todo-item low">
+                <h3>Todo Title 1</h3>
+                <p>Due Date: 2024-11-10</p>
+             </div>
+        </section>
+    </main>
+
+    <!-- Modal for adding/editing todos using the dialog element -->
+    <dialog id="todo-dialog">
+        <form id="todo-form" method="dialog">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate" required>
+
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <menu>
+                <button value="cancel">Cancel</button>
+                <button type="submit" value="default">Save Todo</button>
+            </menu>
+        </form>
+</dialog>
+</body>
+</html>
