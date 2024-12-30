@@ -84,8 +84,15 @@ export default class Dom {
                 const todoId = e.target.parentElement.dataset.id;
                 myProject.removeTodoFromProject(activeProject, parseInt(todoId));
                 this.render(projectListContainer, todoListContainer);
+            } else if (e.target.matches(".check-btn")) {
+                toggleCheck(e.target);
             }
         })
+
+        const toggleCheck = (element) => {
+            element.textContent = element.textContent === "Check" ? "Checked" : "Check";
+            element.style.backgroundColor = element.textContent === "Check" ? "#ea580c" : "#4CAF50";
+        }
 
     }
 

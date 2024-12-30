@@ -159,6 +159,7 @@ span {
 .check-btn {
     padding: 8px 16px;
     background-color: #4CAF50;
+    background-color: #ea580c;
     color: white;
     border: none;
     border-radius: 4px;
@@ -168,9 +169,9 @@ span {
 }
 
 /* Change the background color on hover */
-.check-btn:hover {
+/* .check-btn:hover {
     background-color: #45a049;
-}
+} */
 
 /* Change color and style when clicked (checked state) */
 .todo-item.checked .check-btn {
