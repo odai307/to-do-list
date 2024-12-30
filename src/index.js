@@ -1,10 +1,8 @@
-import "./assets/styles/style.css"
+import "./assets/styles/style.css";
+import Dom from "./dom";
 
-import Dom from "./dom.js";
 
-const dom = new Dom();
-dom.submitProject();
+const myDom = new Dom();
 
-dom.createProjectElement("project");
 
-dom.renderProject();
+myDom.init();
