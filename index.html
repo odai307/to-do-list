@@ -8,7 +8,8 @@
 <script defer src="main.js"></script></head>
 <body>
     <!-- Sidebar for projects -->
-    <aside class="sidebar">
+    <aside class="sidebar" data-sidebar>
+        <div class="close-sidebar-btn" data-close-sidebar-btn>X</div>
         <h2>Projects</h2>
         <input type="text" id="new-project-input" placeholder="Enter new project name" data-project-input autofocus>
         <button id="new-project-btn" data-add-project-btn>Add Project</button>
@@ -28,6 +29,7 @@
     <!-- Main content for todos -->
     <main class="content">
         <header class="header">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="menu-icon" data-menu-icon><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
             <h1>Todo List</h1>
             <button id="new-todo-btn" data-add-todo-btn>Add Todo</button>
         </header>
